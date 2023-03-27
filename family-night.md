@@ -5,7 +5,7 @@
 > Movie, Games, Popcorn.  As we slumber in from our travels, how about an unwinding night?
 - Start with Movie
 - Transition to games
-- Mom and Pop welcome, stories about there first family reunions.  Recap of some of the great Leuck get togethers. 
+- Mom and Dad welcome, stories about there first family reunions.  Recap of some of the great Leuck get togethers. 
 
 Trivia, which one is Frank and Judith?  who are the others?
 <div class="row"> <!--- make a new row -->
