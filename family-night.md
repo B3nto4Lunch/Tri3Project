@@ -23,10 +23,10 @@ Trivia, which one is Frank and Judith?  who are the others?
 
 ### Tuesday Family Night
 > Family History night.  What better way to unite in reunion spirit then talk about us, explore our similarities and get excited about our differences.  A night of stories on how we all came together as Leuck's, plus some games on our similarities and differences.
-- Learn the "Leuck Song"
+- Learn the "Leuck musicla"
 - Kick off with some games to look at our similarities and differences.
 - Originals, plan 5 minute story and introduction on you and your clan.   Props and acting encouraged with your stories.  Stick to the 5 minute time line.
-- Frank and Judith love story
+- Frank and Base love story
 - Encores and requests
 - Family prayer, 'Leuck style'
 
