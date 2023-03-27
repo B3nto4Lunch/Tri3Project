@@ -31,10 +31,10 @@ Trivia, which one is Frank and Judith?  who are the others?
 - Family prayer, 'Leuck style'
 
 ### Wednesday Family Night
-> Something super fun!
+> Something super joyful!
 
 ### Thursday Family Night
-> Something super, super fun!
+> Something super, super great!
 
 ### Friday Family Night
 > Something super, super, super fun!
