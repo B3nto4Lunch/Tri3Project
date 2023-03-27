@@ -41,3 +41,6 @@ Trivia, which one is Frank and Judith?  who are the others?
 John CEna
 asd;f;lkjewripwoife
 asdfasdf
+
+
+Our group values hard work and cohesive stuff where we can calobrate and hold each other accountabkle. our group is great.
