@@ -1,6 +1,7 @@
 remote_theme: pages-themes/tactile@v0.2.0
-plugins: - jekyll-remote-theme
+plugins: 
+- jekyll-remote-theme
 title: "Big Idea 2: Guide to adding data related to user "
-description: "Joselyn A, Ederick, Martin, Akshat, Samit"
+description: "Joselyn, Ederick, Martin, Akshat, Samit"
 gitorg: "https://github.com/B3nto4Lunch/Tri3Project"
 google_analytics:
