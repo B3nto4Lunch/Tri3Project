@@ -1,46 +1,57 @@
-## Family Night
-> Each evening family will meet.  Family nights are intended to build the Leuck family legacy.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messaging System</title>
+</head>
+<body>
+    <h1>Messaging System</h1>
+    
+    <div id="message-box">
+        <div class="message">
+            <p><strong>John:</strong> Hey, what's up?</p>
+        </div>
+        <div class="message">
+            <p><strong>Jane:</strong> Not much, just hanging out. You?</p>
+        </div>
+        <div class="message">
+            <p><strong>John:</strong> Same here. Do you want to grab lunch later?</p>
+        </div>
+        <div class="message">
+            <p><strong>Jane:</strong> Sure, where do you want to go?</p>
+        </div>
+    </div>
+    
+    <form id="message-form">
+        <input type="text" id="message-input" placeholder="Type your message here...">
+        <button type="submit">Send</button>
+    </form>
+    
+    <script>
+        const messageForm = document.querySelector('#message-form');
+        const messageInput = document.querySelector('#message-input');
+        const messageBox = document.querySelector('#message-box');
 
-### Leuck Greet
-> Movie, Games, Popcorn.  As we slumber in from our travels, how about an unwinding night?
-- Start with Movie
-- Transition to games
-- Mom and Dad welcome, stories about there first family reunions.  Recap of some of the great Leuck get togethers. 
+        messageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-Trivia, which one is Frank and Judith?  who are the others?
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/sherwood_glena.jpg" alt="Field" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/frank_judith.jpg" alt="Bocce" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/norville_erma.jpg" alt="Pool" style="width:100%">
-  </div>
-</div>
+            // Get the message text from the input field
+            const messageText = messageInput.value.trim();
 
-### Tuesday Family Night
-> Family History night.  What better way to unite in reunion spirit then talk about us, explore our similarities and get excited about our differences.  A night of stories on how we all came together as Leuck's, plus some games on our similarities and differences.
-- Learn the "Leuck musicla"
-- Kick off with some games to look at our similarities and differences.
-- Originals, plan 5 minute story and introduction on you and your clan.   Props and acting encouraged with your stories.  Stick to the 5 minute time line.
-- Frank and Base love story
-- Encores and requests
-- Family prayer, 'Leuck style'
+            if (messageText === '') {
+                return;
+            }
 
-### Wednesday Family Night
-> Something super joyful!
+            // Create a new message element
+            const message = document.createElement('div');
+            message.classList.add('message');
+            message.innerHTML = `<p><strong>You:</strong> ${messageText}</p>`;
 
-### Thursday Family Night
-> Something super, super great!
+            // Add the new message element to the message box
+            messageBox.appendChild(message);
 
-### Friday Family Night
-> Something super, super, super fun!
-John CEna
-asd;f;lkjewripwoife
-asdfasdf
-
-
-Our group values hard work and cohesive stuff where we can calobrate and hold each other accountabkle. our group is great.
+            // Clear the message input field
+            messageInput.value = '';
+        });
+    </script>
+</body>
+</html>
