@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <html>
     <head>
@@ -8,7 +8,6 @@
     <body>
         <div class="banner">
             <div class="navbar">
-                <img src="JAMES.png" class="logo">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Lesson 1</a></li>
@@ -16,5 +15,4 @@
                     <li><a href="#">Lesson 3</a></li>
                 </ul>
         </div>
-    </body>
-</html>
+    
