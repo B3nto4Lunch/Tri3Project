@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Messaging System</title>
@@ -57,7 +57,7 @@
 </html>
 
 
-<!DOCTYPE html>
+
 <html>
 <head>
 	<title>Messaging System</title>
