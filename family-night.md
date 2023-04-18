@@ -1,181 +1,196 @@
 
 <html>
 <head>
-    <title>Messaging System</title>
+	<title>User Data Collection Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f1f1f1;
+		}
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			margin: 50px auto;
+			width: 500px;
+		}
+		input[type=text], input[type=email], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			background-color: #f8f8f8;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			float: right;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		.error {
+			color: red;
+		}
+	</style>
 </head>
 <body>
-    <h1>Messaging System</h1>
-    
-    <div id="message-box">
-        <div class="message">
-            <p><strong>John:</strong> Hey, what's up?</p>
-        </div>
-        <div class="message">
-            <p><strong>Jane:</strong> Not much, just hanging out. You?</p>
-        </div>
-        <div class="message">
-            <p><strong>John:</strong> Same here. Do you want to grab lunch later?</p>
-        </div>
-        <div class="message">
-            <p><strong>Jane:</strong> Sure, where do you want to go?</p>
-        </div>
-    </div>
-    
-    <form id="message-form">
-        <input type="text" id="message-input" placeholder="Type your message here...">
-        <button type="submit">Send</button>
-    </form>
-    
-    <script>
-        const messageForm = document.querySelector('#message-form');
-        const messageInput = document.querySelector('#message-input');
-        const messageBox = document.querySelector('#message-box');
+	<form>
+		<h1>User Data Collection Form</h1>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		<label for="confirmPassword">Confirm Password:</label>
+		<input type="password" id="confirmPassword" name="confirmPassword" required>
+		<span id="passwordError" class="error"></span>
+		<input type="submit" value="Submit">
+	</form>
 
-        messageForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+	<script>
+		const form = document.querySelector('form');
+		const passwordInput = document.querySelector('#password');
+		const confirmPasswordInput = document.querySelector('#confirmPassword');
+		const passwordError = document.querySelector('#passwordError');
 
-            // Get the message text from the input field
-            const messageText = messageInput.value.trim();
+		// Validate password and confirm password match
+		confirmPasswordInput.addEventListener('input', () => {
+			if (passwordInput.value !== confirmPasswordInput.value) {
+				passwordError.textContent = "Passwords do not match";
+				confirmPasswordInput.setCustomValidity("Passwords do not match");
+			} else {
+				passwordError.textContent = "";
+				confirmPasswordInput.setCustomValidity("");
+			}
+		});
 
-            if (messageText === '') {
-                return;
-            }
-
-            // Create a new message element
-            const message = document.createElement('div');
-            message.classList.add('message');
-            message.innerHTML = `<p><strong>You:</strong> ${messageText}</p>`;
-
-            // Add the new message element to the message box
-            messageBox.appendChild(message);
-
-            // Clear the message input field
-            messageInput.value = '';
-        });
-    </script>
+		// Submit form
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			console.log('Submitting form...');
+			// Add code to send form data to server here
+		});
+	</script>
 </body>
 </html>
 
 
 
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Messaging System</title>
-	<style>
-		body {
-			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
+  <head>
+    <meta charset="UTF-8">
+    <title>Collecting User Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
 
-		.container {
-			margin: 20px auto;
-			max-width: 800px;
-			padding: 20px;
-			background-color: #fff;
-			box-shadow: 0 0 10px rgba(0,0,0,0.2);
-			border-radius: 5px;
-		}
+      form {
+        background-color: white;
+        border-radius: 5px;
+        width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+      }
 
-		h1 {
-			font-size: 32px;
-			margin-top: 0;
-		}
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="file"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
 
-		form {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-top: 20px;
-		}
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
 
-		label {
-			font-size: 16px;
-			margin-bottom: 5px;
-			font-weight: bold;
-		}
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
 
-		input[type=text], textarea {
-			width: 100%;
-			padding: 10px;
-			margin-bottom: 10px;
-			border: none;
-			border-radius: 3px;
-			box-shadow: 0 0 5px rgba(0,0,0,0.2);
-			font-size: 16px;
-			resize: none;
-		}
+      label {
+        font-weight: bold;
+      }
 
-		input[type=submit] {
-			background-color: #4CAF50;
-			color: #fff;
-			border: none;
-			padding: 10px 20px;
-			border-radius: 3px;
-			font-size: 16px;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-		}
+      .error-message {
+        color: red;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="myForm" onsubmit="return validateForm()">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
 
-		input[type=submit]:hover {
-			background-color: #3e8e41;
-		}
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
 
-		.messages {
-			margin-top: 20px;
-		}
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-		.message {
-			background-color: #f2f2f2;
-			padding: 10px;
-			margin-bottom: 10px;
-			border-radius: 3px;
-			box-shadow: 0 0 5px rgba(0,0,0,0.2);
-		}
+      <label for="photo">Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
 
-		.message p {
-			margin: 0;
-			font-size: 16px;
-			word-wrap: break-word;
-		}
+      <input type="submit" value="Submit">
+      <div class="error-message" id="error-message"></div>
+    </form>
 
-		.message .author {
-			font-weight: bold;
-			margin-bottom: 5px;
-		}
+    <script>
+      function validateForm() {
+        var username = document.forms["myForm"]["username"].value;
+        var password = document.forms["myForm"]["password"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var photo = document.forms["myForm"]["photo"].value;
 
-		.message .date {
-			font-size: 14px;
-			color: #666;
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<h1>Messaging System</h1>
-		<form>
-			<label for="author">Your Name:</label>
-			<input type="text" id="author" name="author" placeholder="Enter your name" required>
+        if (username == "") {
+          document.getElementById("error-message").innerHTML = "Username is required.";
+          return false;
+        }
 
-			<label for="message">Your Message:</label>
-			<textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        if (password == "") {
+          document.getElementById("error-message").innerHTML = "Password is required.";
+          return false;
+        }
 
-			<input type="submit" value="Send Message">
-		</form>
+        if (email == "") {
+          document.getElementById("error-message").innerHTML = "Email is required.";
+          return false;
+        }
 
-		<div class="messages">
-			<!-- Messages will be inserted here -->
-		</div>
-	</div>
+        if (photo == "") {
+          document.getElementById("error-message").innerHTML = "Photo is required.";
+          return false;
+        }
 
-	<script>
-		// Fetch messages from backend and display them
-		function fetchMessages() {
-			fetch('/messages')
-				.then(response => response.json())
-				.then(messages => {
-					const messagesDiv = document.querySelector('.messages');
-					messagesDiv.innerHTML = '';
-
-				
+        return true;
+      }
+    </script>
+  </body>
+</html>
